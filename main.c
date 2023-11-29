@@ -29,3 +29,19 @@ void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas], const 
         printf("\n");
     }
 }
+
+int main() {
+    int filas, columnas;
+
+    // Obtener dimensiones de la matriz
+    printf("Ingrese el numero de filas de las matrices: ");
+    scanf("%d", &filas);
+    printf("Ingrese el numero de columnas de las matrices: ");
+    scanf("%d", &columnas);
+
+    // Declarar matrices
+    int matriz1[filas][columnas];
+    int matriz2[filas][columnas];
+    int resultado[filas][columnas];
+
+}
