@@ -1,3 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>  // Para utilizar la funcion rand()
 
+// Funcion para inicializar una matriz con numeros aleatorios entre 0 y 100
+void inicializarMatriz(int filas, int columnas, int matriz[filas][columnas]) {
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            matriz[i][j] = rand() % 101;  // Numeros aleatorios entre 0 y 100
+        }
+    }
+}
+
+// Funcion para sumar dos matrices y almacenar el resultado en otra matriz
+void sumarMatrices(int filas, int columnas, int matriz1[filas][columnas], int matriz2[filas][columnas], int resultado[filas][columnas]) {
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            resultado[i][j] = matriz1[i][j] + matriz2[i][j];
+        }
+    }
+}
+
+// Funcion para imprimir una matriz
+void imprimirMatriz(int filas, int columnas, int matriz[filas][columnas], const char *nombre) {
+    printf("\n%s:\n", nombre);
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            printf("%d\t", matriz[i][j]);
+        }
+        printf("\n");
+    }
+}
