@@ -44,4 +44,19 @@ int main() {
     int matriz2[filas][columnas];
     int resultado[filas][columnas];
 
+    // Inicializar matrices con numeros aleatorios
+    inicializarMatriz(filas, columnas, matriz1);
+    inicializarMatriz(filas, columnas, matriz2);
+
+    // Imprimir matrices originales
+    imprimirMatriz(filas, columnas, matriz1, "Matriz 1");
+    imprimirMatriz(filas, columnas, matriz2, "Matriz 2");
+
+    // Sumar matrices
+    sumarMatrices(filas, columnas, matriz1, matriz2, resultado);
+
+    // Imprimir matriz resultante
+    imprimirMatriz(filas, columnas, resultado, "Matriz Resultante");
+
+    return 0;
 }
